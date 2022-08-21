@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pingpong {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="pingpong" width="600" height="500"></canvas>
+    <script>
+        let canvas = document.getElementById("pingpong");
+        let context = canvas.getContext("2d");
+        //code Khoang cach cua thanh chu nhat
+        context.fillStyle = "black";
+        context.fillRect(100, 200, 50, 75);
+
+        context.fillStyle = "red";
+        context.beginPath();
+        context.arc(300, 350, 100, 0, Math.PI * 2, false);
+
+        context.closePath();
+        context.fill();
+
+        // Draw Funtion 
+        function drawRect(x, y, w, h, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, w, h);
+        }
+        function drawText(text, x, y, color) {
+            ctx.fillStyle = color;
+            ctx.font = "75px fantasy";
+            ctx.fillRect(text, x, y);
+        }
+        function drawCircle(x, y, r, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.fill();
+        }
+    </script>
+</body>
+
+</html>
